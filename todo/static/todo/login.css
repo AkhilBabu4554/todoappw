@@ -1,0 +1,80 @@
+body{
+    background-color: #11151C;  
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    margin: 0%;
+    padding: 0;
+}
+.Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+.Register{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    /* width: 40%; */
+    height: 65%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border: 2px solid #11151C;
+    position: relative;
+}
+.form-details{
+    width: 31%;
+    height:6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    margin-bottom: 25px;
+    border: 2px solid #11151C;
+    border-radius: 4px;
+    border-bottom-left-radius:0px ;
+    border-bottom-right-radius:0px ;
+    border-bottom: 3px solid  #ef7b45;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 0.8125rem;
+    
+}
+.form-details input::placeholder {
+    color: white;
+    opacity: 0.6; /* Optional: Adjusts the visibility of the placeholder */
+}
+.heading{
+    color: white;
+    position:absolute;
+    top: 0%;
+    padding-top: 10px;
+    
+}
+.heading span{
+    color: #d84727;
+    
+}
+.Login-btn{
+    width:31%;
+    height: 7%;
+    background-color: #ef7b45;
+    border: #ef7b45 2px solid;
+    border-radius: 5px;
+    color: white;
+}
+.Register-link{
+    margin-top: 10px;
+    color: white;
+    font-size: 0.8125rem;
+}
+.Register-link a{
+    text-decoration: none;
+    color: #d84727;
+}

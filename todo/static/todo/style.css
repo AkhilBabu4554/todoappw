@@ -1,0 +1,196 @@
+body{
+    margin: 0;
+    background-color: #11151C;
+}
+.Task{
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    /* text-decoration: line-through; */
+    
+}
+nav {
+    
+    background-color: #11151C;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    position: relative;
+    padding: 10%;
+    font-family: "Paytone One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 9rem;
+    margin-bottom: 15px;
+}
+nav span{
+    color: #d84727;
+}
+#formid {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-top: 40px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    gap: 5px;
+}
+#formtask{
+    width: 15%;
+    height: 30px;
+    border-radius: 13px;
+    text-align: center;
+    box-shadow: white;
+    border: 2px solid #F4F3EE;
+    margin-left: 18px;
+    background-color: #F4F3EE;
+    color: black;
+}
+.Create {
+    border-radius: 8px;
+    border: 2px solid #ef7b45;
+    background-color: #ef7b45;
+    color: white;
+    width: 6%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 10px;
+}
+.main {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* flex-direction: column; */
+    margin-bottom: 20px;
+    background-color:#11151C;
+    
+    width: 55%;
+    padding-right: 5px;
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.incomplete{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color:#11151C;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    width: 100%;
+    padding-left:5px;
+    padding-right: 5px;
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.complete{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color:#11151C;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.25);;
+    border-radius: 5px;
+    width: 100%;
+    padding-right:5px;
+    padding-left:5px;
+    font-family: "Inter", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #3f4143;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.Task-complete{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 5px;
+    text-decoration: line-through;
+}
+.incomplete h3{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 5px;
+}
+.btnlink{
+    width: 80px;
+    text-decoration: none;
+    gap: 20px;
+    margin-left: 20px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: inherit;
+    outline: none;
+    
+    
+}
+#update{
+    background-color: #d84727;
+    font-size: 0.8125rem
+}
+#btnlink{
+    background-color: #841007;   
+}
+.btnlink{
+    background-color: #d84727;
+    font-size: 0.8125rem   
+}
+#check{
+    width: 100px;
+}
+
+    
+
+.btnundo{
+    color: #9e9d99;
+
+    width: 80px;
+    text-decoration: none;
+    gap: 20px;
+    margin-left: 20px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    /* color: inherit; */
+    outline: none;
+    background-color: #61181e;
+    font-size: 0.8125rem
+}
+
+.btndel{
+    color: #9e9d99;
+    width: 80px;
+    text-decoration: none;
+    gap: 20px;
+    margin-left: 20px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    /* color: inherit; */
+    outline: none;
+    background-color: #271210;
+    font-size: 0.8125rem;
+    box-shadow: black;
+    
+}

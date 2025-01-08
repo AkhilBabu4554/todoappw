@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Moul&family=Paytone+One&display=swap" rel="stylesheet">
+    
+    <title>Todoapp</title>
+    <link rel="stylesheet" href="{% static 'todo/style.css' %}">
+    <script src="{% static 'todo/main.js' %}"></script>
+</head>
+<body>
+    <!-- navbar (supposed to be...)-->
+    <nav>
+        
+            <!-- Create -->
+
+        To <span>Do</span> App
+        
+        <form action="{% url 'Create'%}" id="formid" method="post">
+            {% csrf_token %}
+            <input id="formtask" type="text" name="taskname" placeholder="Add Task">
+            <button type="submit" class="Create" onclick="emptycheck(event)">Create</button>
+            
+        </form>
+    </nav>
+    <a href="{% url 'logout'%}">logout</a>
+    <div class="container">
+        {% for task in Tasks %}
+        <div class="main">
+            {% if task.Completed == False%}
+            <div class="incomplete">
+                <h3 class="Task-incomplete" id="task">{{task.Title}}</h3>
+
+            <a class="btnlink" id="check"  href="{% url 'Toggle' task.id%}">{{task.display}}</a>
+
+            <a class="btnlink" id="update" href="{% url 'Update' task.id%}">update</a>
+            
+            <a class="btnlink" id="btnlink" href="{% url 'Delete' task.id%}">delete</a>
+            </div>
+            
+            {% else %}
+            
+           <div class="complete">
+            <h3 class="Task-complete" id="task">{{task.Title}}</h3>
+            <a class="btnundo" id="check"  href="{% url 'Toggle' task.id%}">Undo</a>
+            <a class="btndel" id="btnlink" href="{% url 'Delete' task.id%}">delete</a>
+           </div>
+            {% endif %}
+        </div>
+            
+        {% endfor %}
+    </div>
+
+
+
+    
+    
+    
+</body>
+</html>

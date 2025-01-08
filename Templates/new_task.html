@@ -1,0 +1,18 @@
+<form action="{% url 'Create'%}" id="formid" method="post">
+    {% csrf_token %}
+    <input id="formtask" type="text" name="taskname" placeholder="Add Task">
+    <button type="submit" onclick="emptycheck(event)">Create</button>
+    <a href="{% url 'TaskList'%}">back</a>
+</form>
+<script>
+    function emptycheck(event){
+        form=document.getElementById('formid')
+        task=document.getElementById('formtask').value.trim();
+        if(task===""){
+        event.preventDefault();
+        alert("the task field cannot be empty")
+    }
+    }   
+    
+    
+</script>

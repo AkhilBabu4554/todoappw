@@ -1,0 +1,22 @@
+
+    <form action="{% url 'Update' task.id %}" method="post">
+        {% csrf_token %}
+        <h3>{{task.Title}}</h3>
+        <input type="text" id="formtask" name="taskname"  placeholder="update task">
+         <button onclick="emptycheck(event)" type="submit">Update</button>
+         <a href="{% url 'TaskList'%}">back</a>
+    
+    </form>
+    
+
+<script>
+ function emptycheck(event){
+        form=document.getElementById('formid')
+        task=document.getElementById('formtask').value.trim();
+        if(task===""){
+        event.preventDefault();
+        alert("the task field cannot be empty")
+    }
+    }   
+
+</script>

@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an account</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Moul&family=Paytone+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'todo/Register.css' %}">
+</head>
+<body>
+    <form action="{% url 'Register'%}" method="post">
+        {% csrf_token %}
+        <div class="Container">
+            
+            <div class="Register">
+                <div class="heading"><h3>To<span>Do</span> App</h3></div>
+                <div class="form-details"> {{form.username}}
+                </div>
+                <div class="form-details">{{form.password1}}</div>
+                <div class="form-details">{{form.password2}}</div>
+                <button class="Register-btn" type="submit">Register</button>
+                <div class="check">
+                {% for fields in forms %}
+                    {% if field.errors %}
+                        {% for error in field.errors %}
+                            <h1 class="erroe">{{error}}</h1>  
+                        {% endfor %}
+                    {%  endif %}
+                {% endfor %}
+                </div>
+                <div class="login-link"><span>Already have an account? </span><a href="{% url 'login'%}">Login</a></div>
+            </div>
+           
+
+            
+        </div>
+                    
+            
+       
+        
+        <h1>
+           
+        </h1>
+        
+    </form>
+</body>
+</html>
+
