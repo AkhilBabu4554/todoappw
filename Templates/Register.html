@@ -19,18 +19,31 @@
                 <div class="heading"><h3>To<span>Do</span> App</h3></div>
                 <div class="form-details"> {{form.username}}
                 </div>
-                <div class="form-details">{{form.password1}}</div>
-                <div class="form-details">{{form.password2}}</div>
-                <button class="Register-btn" type="submit">Register</button>
-                <div class="check">
-                {% for fields in forms %}
-                    {% if field.errors %}
-                        {% for error in field.errors %}
-                            <h1 class="erroe">{{error}}</h1>  
-                        {% endfor %}
-                    {%  endif %}
-                {% endfor %}
+                {% if form.username.errors %}
+                <div class="error-message">
+                    {% for error in form.username.errors %}
+                        <h1 class="error">{{ error }}</h1>  
+                    {% endfor %}
                 </div>
+                {% endif %}
+                <div class="form-details">{{form.password1}}</div>
+                {% if form.password1.errors %}
+                        <div class="error-message">
+                            {% for error in form.password1.errors %}
+                                <h1 class="error">{{ error }}</h1>  
+                            {% endfor %}
+                        </div>
+                {% endif %}
+                <div class="form-details">{{form.password2}}</div>
+                {% if form.password2.errors %}
+                        <div class="error-message">
+                            {% for error in form.password2.errors %}
+                                <h1 class="error">{{ error }}</h1>  
+                            {% endfor %}
+                        </div>
+                {% endif %}
+                <button class="Register-btn" type="submit">Register</button>
+                
                 <div class="login-link"><span>Already have an account? </span><a href="{% url 'login'%}">Login</a></div>
             </div>
            

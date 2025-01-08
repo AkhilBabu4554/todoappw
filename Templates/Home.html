@@ -13,11 +13,12 @@
     <script src="{% static 'todo/main.js' %}"></script>
 </head>
 <body>
+    <a class="logout" href="{% url 'logout'%}">logout</a>
     <!-- navbar (supposed to be...)-->
     <nav>
         
             <!-- Create -->
-
+           
         To <span>Do</span> App
         
         <form action="{% url 'Create'%}" id="formid" method="post">
@@ -26,8 +27,9 @@
             <button type="submit" class="Create" onclick="emptycheck(event)">Create</button>
             
         </form>
+        
     </nav>
-    <a href="{% url 'logout'%}">logout</a>
+
     <div class="container">
         {% for task in Tasks %}
         <div class="main">
