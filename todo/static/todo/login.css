@@ -50,6 +50,23 @@ body{
     color: white;
     opacity: 0.6; /* Optional: Adjusts the visibility of the placeholder */
 }
+.error-message{
+    width: 31%;
+    height:6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column ;
+    margin-bottom: 25px;
+    border: 2px solid #11151C;
+    border-radius: 4px;
+    border-bottom-left-radius:0px ;
+    border-bottom-right-radius:0px ;
+    outline: none;
+    background: transparent;
+    color: red;
+    font-size: 0.8125rem;
+}
 .heading{
     color: white;
     position:absolute;

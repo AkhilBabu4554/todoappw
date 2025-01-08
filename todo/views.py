@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect,HttpResponse,get_object_or_404
 from .models import Task,User
-from .forms import UsercreateForm
+from .forms import UsercreateForm,CustomLoginForm
 from django.contrib.auth import authenticate,login,logout
 from django.contrib.auth.decorators import login_required
 
@@ -64,17 +64,21 @@ def RegisterView(request):
 
 def loginview(request):
     if request.method=="POST":
-        username=request.POST.get("username")
-        password=request.POST.get("password")
-        user=authenticate(request,username=username,password=password)
-        if user:
-            login(request,user)
-            return redirect('TaskList')
-        else:
-            pass    
+        form=CustomLoginForm(request,data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('TaskList')  # Redirect to the home page or dashboard
+            else:
+                form.add_error(None, "Invalid username or password.")
+    # If the form is not valid, or authentication fails, render the form with errors
+        return render(request, 'login.html', {'form': form})
     else:
-        pass
-    return render(request,'login.html')
+        form = CustomLoginForm()
+    return render(request, 'login.html', {'form': form})
     
 def logoutview(request):
     logout(request)
