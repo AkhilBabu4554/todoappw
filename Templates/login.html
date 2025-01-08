@@ -39,9 +39,8 @@
                         {% endfor %}
                     </div>
                 {% endif %}
-                <input type="text" name="username" class="form-details"  placeholder="Username" value="{{ form.username.value }}">
-                
-                <input type="password" class="form-details" name="password"  placeholder="Password" value="{{ form.password.value }}">
+                <div class="form-details">{{ form.username }}</div>
+                <div class="form-details">{{ form.password }}</div>
                 
                 <button  class="Login-btn"type="submit">Login</button>
                 <div class="Register-link"><span>Dont have an account? </span><a href="{% url 'Register'%}">Register</a></div>
